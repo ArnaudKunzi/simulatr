@@ -8,6 +8,12 @@
 #' groups.
 #'
 #' @param n1 a single integer value. The sample size of group 1.
+#' @param n2 a single integer value. The sample size of group 2.
+#' @param mean1 a mean.
+#' @param mean2 another mean.
+#' @param sd1 a std deviation.
+#' @param sd2 another std deviation
+#' @param seed a seed
 #' TODO document all arguments
 #'
 #' @details
@@ -17,12 +23,12 @@
 #' class with name 'SimulationResult'.
 #'
 #' @examples
-#' getSimulatedTwoArmMeans(n1 = 50, n2 = 50, mean1 = 5, mean2 = 7, sd1 = 3,
+#' get_simulated_two_arm_means(n1 = 50, n2 = 50, mean1 = 5, mean2 = 7, sd1 = 3,
 #'                         sd2 = 4, seed = 123)
 #'
 #' @export
 #'
-getSimulatedTwoArmMeans <- function(
+get_simulated_two_arm_means <- function(
         n1,
         n2,
         mean1,
@@ -68,7 +74,7 @@ getSimulatedTwoArmMeans <- function(
 #' @param ... further arguments passed to or from other methods.
 #'
 #' @examples
-#' x <- getSimulatedTwoArmMeans(n1 = 50, n2 = 50, mean1 = 5, mean2 = 7,
+#' x <- get_simulated_two_arm_means(n1 = 50, n2 = 50, mean1 = 5, mean2 = 7,
 #'                              sd1 = 3, sd2 = 4, seed = 123)
 #' print(x)
 #'
@@ -99,7 +105,7 @@ print.SimulationResult <- function(x, ...) {
 #' A ggplot2 object.
 #'
 #' @examples
-#' x <- getSimulatedTwoArmMeans(n1 = 50, n2 = 50, mean1 = 5, mean2 = 7,
+#' x <- get_simulated_two_arm_means(n1 = 50, n2 = 50, mean1 = 5, mean2 = 7,
 #'                              sd1 = 3, sd2 = 4, seed = 123)
 #' if (require(ggplot2)) plot(x)
 #'
@@ -115,5 +121,5 @@ plot.SimulationResult <- function(
         ylab = "Simulated Values") {
 
     # TODO implement the plot function
-  stop("not implemented yet")
+
 }
